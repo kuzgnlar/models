@@ -8,7 +8,7 @@ Açık Hack Türkçe Doğal Dil İşleme Online Yarışma Programı kapsamında 
 
 Sunulan modellerin tümü [Stefan Schweter tarafından ön eğitimi yapılmış(pretrained) **ELECTRA base** modeli](https://github.com/stefan-it/turkish-bert/tree/master/electra) üzerine eğitilmiştir. *Electra base* modelinin seçilme sebebi [bu adreste](https://github.com/stefan-it/turkish-bert#pos-tagging) de belirtildiği gibi **PoS tagging** ve **NER** görevlerinde paylaşılmış diğer tüm Türkçe ön eğitimli modellere(BERTurk, DistilBERTurk, XLM-RoBERTa vb.) göre daha başarılı olmasıdır. Bu kapsamda **NER**, **Soru-Cevap** ve **Duygu Durumu Analizi** olmak üzere 3 model eğitilmiş, eğitilen tüm modeller [huggingface](https://huggingface.co/kuzgunlar) üzerinden paylaşılmıştır.
 
-## NER
+## NER [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kuzgnlar/models/blob/master/ner.ipynb) 
 Kullanılan veri seti:
 
 > [1] Sahin, H. Bahadir; Eren, Mustafa Tolga; Tirkaz, Caglar; Sonmez, Ozan; Yildiz, Eray (2017), “English/Turkish Wikipedia Named-Entity Recognition and Text Categorization Dataset”, Mendeley Data, v1 [http://dx.doi.org/10.17632/cdcztymf4k.1](http://dx.doi.org/10.17632/cdcztymf4k.1)
@@ -26,7 +26,7 @@ Kullanılan veri seti:
 > [{'word': 'Bet', 'score': 0.9947249889373779, 'entity': 'B-space', 'index': 1}, {'word': '##el', 'score': 0.6537177562713623, 'entity': 'I-space', 'index': 2}, {'word': '##ge', 'score': 0.9661315679550171, 'entity': 'I-space', 'index': 3}, {'word': '##use', 'score': 0.8851485848426819, 'entity': 'I-space', 'index': 4}, {'word': "'", 'score': 0.5226207375526428, 'entity': 'I-space', 'index': 5}, {'word': 'yıldızlar', 'score': 0.8456777930259705, 'entity': 'B-space', 'index': 8}, {'word': '##rix', 'score': 0.5831472277641296, 'entity': 'B-space', 'index': 15}, {'word': 'yıldızlar', 'score': 0.9033623337745667, 'entity': 'B-space', 'index': 21}]
 > [{'word': 'Azerbaycan', 'score': 0.7510120272636414, 'entity': 'B-location', 'index': 1}, {'word': 'general', 'score': 0.999763011932373, 'entity': 'B-military', 'index': 3}, {'word': 'To', 'score': 0.8212651610374451, 'entity': 'B-location', 'index': 6}, {'word': '##v', 'score': 0.6104686260223389, 'entity': 'I-location', 'index': 7}]
 
-## Soru-Cevap
+## Soru-Cevap [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kuzgnlar/models/blob/master/q%26a.ipynb) 
 
 Kullanılan veri seti:
 
@@ -49,7 +49,7 @@ Kullanılan veri seti:
 > {'score': 0.5904039331509782, 'start': 1000, 'end': 1072, 'answer': 'insan ve bilgisayar arasındaki klavye, fare gibi veri girişi aygıtlarını'}
 	
 
-## Duygu Durumu Analizi
+## Duygu Durumu Analizi [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kuzgnlar/models/blob/master/sentiment_analysis.ipynb) 
 
 Kullanılan veri seti:
 
@@ -66,5 +66,5 @@ Kullanılan veri seti:
 	print(sa("Malesef günümüzde tüm dünyada reklam işten daha önemli."))
 	print(sa("Biz umudumuzu hiç kaybetmedik."))
 	
-> [{'label': 'negative', 'score': 0.5602248311042786}]
-> [{'label': 'positive', 'score': 0.5182426571846008}]
+> [{'label': 'negative', 'score': 0.9818702936172485}]
+> [{'label': 'positive', 'score': 0.9968613386154175}]
