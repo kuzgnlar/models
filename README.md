@@ -5,7 +5,7 @@
 
 ![GPL 3.0](https://img.shields.io/badge/license-GPLv3-red.svg)
 
-This is a repo containing information about the the training process and usege of fine-tuned models by the Kuzgunlar team.
+This is a repo containing information about the the training process and usage of fine-tuned models by the Kuzgunlar team.
 
 
 All of the presented models are fine-tuned on [pretrained **ELECTRA base** model by Stefan Schweter](https://github.com/stefan-it/turkish-bert/tree/master/electra). The reason for choosing the *Electra base* model is that, as stated in [this repository](https://github.com/stefan-it/turkish-bert#pos-tagging), it is more successful than all of the Turkish pre-trained models (BERTurk, DistilBERTurk, XLM-RoBERTa etc.) in **PoS tagging** and **NER** tasks. In this context, Turkish Electra **NER**, **Question and Answer** and **Sentiment Analysis** models are trained and all the trained models are shared over [our huggingface organization](https://huggingface.co/kuzgunlar).
